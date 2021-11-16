@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  template:
+    container_name: template
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+  cypress:
+    container_name: cypress
+    depends_on:
+      - template
+    build:
+      context: cypress
+    environment:
+      - "CYPRESS_BASE_URL=http://template"
+      - "CYPRESS_SNAPSHOT_DIFF_DIR=/app/cypress/snapshots/snapshot_failed_diffs"
