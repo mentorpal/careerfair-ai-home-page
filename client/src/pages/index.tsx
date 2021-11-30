@@ -8,7 +8,9 @@ import * as React from "react";
 
 // markup
 function IndexPage(): JSX.Element {
-  return <div></div>;
+  return <div>
+    <h1> Hello ! </h1>
+  </div>;
 }
 
 export default IndexPage;
