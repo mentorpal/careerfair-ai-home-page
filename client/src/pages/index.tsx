@@ -1,14 +1,23 @@
-/*
-This software is Copyright ©️ 2020 The University of Southern California. All Rights Reserved. 
-Permission to use, copy, modify, and distribute this software and its documentation for educational, research and non-profit purposes, without fee, and without a written agreement is hereby granted, provided that the above copyright notice and subject to the full license file found in the root of this software deliverable. Permission to make commercial use of this software may be obtained by contacting:  USC Stevens Center for Innovation University of Southern California 1150 S. Olive Street, Suite 2300, Los Angeles, CA 90115, USA Email: accounting@stevens.usc.edu
-
-The full terms of this copyright and license should always be found in the root directory of this software deliverable as "license.txt" and if these terms are not found with this software, please contact the USC Stevens Center for the full license.
-*/
+import { Typography, Button } from "@mui/material";
 import * as React from "react";
+import "styles/layout.css"
 
 // markup
 function IndexPage(): JSX.Element {
-  return <div></div>;
+  return <div className="app-container">
+    <Typography className="title" variant="h2" component="h2">
+      Meeting scheduling made easy
+    </Typography>
+    <div className="subtitle-wrapper">
+      <Typography className="subtitle" variant="h6" component="h6">
+        Never miss a meeting. Never be late for one too. Keep track of your meetings and receive smart reminders in appropriate times. Read your smart “Daily Agenda” every morning.
+      </Typography>
+    </div>
+    <div className="btns-container">
+      <Button className="home-btns" variant="contained">Gets started</Button>
+      <Button className="home-btns" variant="contained">Learn More</Button>
+    </div>
+  </div>;
 }
 
 export default IndexPage;

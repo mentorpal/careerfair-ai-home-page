@@ -18,6 +18,9 @@
     "test:types": "tsc --noEmit"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.2.2",
     "gatsby": "^3.13.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
