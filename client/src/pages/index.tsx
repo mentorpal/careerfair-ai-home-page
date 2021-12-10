@@ -1,6 +1,6 @@
 import { Typography, Button } from "@mui/material";
 import * as React from "react";
-import "styles/layout.css"
+import "styles/Layout.css"
 import { Link } from '@mui/material';
 import Container from '@mui/material/Container';
 
