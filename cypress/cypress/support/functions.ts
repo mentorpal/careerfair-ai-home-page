@@ -1,4 +1,3 @@
-
 interface StaticResponse {
   /**
    * Serve a fixture as the response body.

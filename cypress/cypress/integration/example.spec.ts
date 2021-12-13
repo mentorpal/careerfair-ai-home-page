@@ -1,4 +1,3 @@
-
 import { cySetup } from "../support/functions";
 
 describe("visits the site", () => {
