@@ -12,31 +12,34 @@ function IndexPage(): JSX.Element {
   return (
     <div className="app-container">
       <Typography className="title" variant="h2" component="h2">
-        Welcome to CareerFair.ai,<br />
-        we'll be live very soon !{" "}
-        <span className="wave">👋</span>
+        Welcome to CareerFair.ai<br />
+        Coming Soon!{" "}
+        {/* <span className="wave">👋</span> */}
       </Typography>
       <Typography className="subtitle" variant="h4" component="h4">
-        Our Amazing Partners !
+        Please Stay Tuned!
       </Typography>
       <div className="main-container">
       <div className="btns-container">
-        <Button
-          className="home-btns"
-          variant="contained"
-          href="https://careerfair.mentorpal.org/home/?&activityId=https%3A%2F%2Fcareerfair.mentorpal.org%2Fhome%2F&actor=%7B%22objectType%22%3A%22Agent%22%2C%22account%22%3A%7B%22name%22%3A%229ecdb1d8-43aa-4afa-81c1-6a4be82b7c83%22%2C%22homePage%22%3A%22https%3A%2F%2Fcareerfair.mentorpal.org%2Fguests-homepage%2F%3Freferrer%3Dnull%22%7D%2C%22name%22%3A%22guess%22%7D&endpoint=https%3A%2F%2Fqa.mentorpal.org%2Flrs%2Fxapi&fetch=https%3A%2F%2Fqa.mentorpal.org%2Flrs%2Fauth%2Fguesttoken%3F%26username%3Dguess%26userid%3D9ecdb1d8-43aa-4afa-81c1-6a4be82b7c83&registration=9ecdb1d8-43aa-4afa-81c1-6a4be82b7c83"
-          target="_blank"  >
-          Study Page (Spring 2022)
-        </Button>
-        <Button
+      <Button
           className="home-btns"
           variant="contained"
           href=" https://www.eurekalert.org/news-releases/711820"
           target="_blank" >
-          About our Project !
+          About our Project!
+        </Button>
+        <Button
+          className="home-btns"
+          variant="contained"
+          href=""
+          target="_blank"  >
+          Study Page (Spring 2022)
         </Button>
       </div>
       <div className="icontainer">
+      <a href="https://ict.usc.edu/ " target="_blank">
+          <img src={logo3} className="logo-img3"></img>
+        </a>
         <a href=" http://www.fullerton.edu/" target="_blank">
           <img src={logo1} className="logo-img1"></img>
         </a>
@@ -49,14 +52,13 @@ function IndexPage(): JSX.Element {
         {/* <a href="http://www.fullerton.edu/mcNair/" target="_blank">
           <img src={logo6} className="logo-img6"></img>
         </a> */}
-      <a href="https://ict.usc.edu/ " target="_blank">
-          <img src={logo3} className="logo-img3"></img>
-        </a>
       </div>
       </div>
       <Typography className="subtitle" variant="h4" component="h4">
         Connect with us!
       </Typography>
+      <a href = "https://twitter.com/CareerFair_AI" target="_blank">
+      <h1> @careefair.ai </h1></a>
 <a href = " https://www.instagram.com/careerfair.ai/" target="_blank">
       <h1> @careefair.ai </h1></a>
       <div className="social">
