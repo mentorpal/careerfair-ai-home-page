@@ -1,71 +1,89 @@
-import { Typography, Button } from "@mui/material";
-import * as React from "react";
-import "styles/layout.css";
-import logo2 from "static/raise2.png";
-import logo3 from "static/logo5.png";
-import logo1 from "static/csuf2.png";
-import logo5 from "static/DOD.png";
-import logo6 from "static/Mcnair2.png";
-import Instagram from "./instagram";
+import React from "react";
+import Banner from "components/banner/banner";
+import NavBar from "components/navbar/navbar";
 
-function IndexPage(): JSX.Element {
+import "styles/app.css";
+import csuf2 from "static/csuf2.png";
+import usc_ict from "static/usc_ict.png";
+import DOD from "static/DOD.png";
+
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import SocialMediaBubble from "components/socialMedia/social-media-bubble";
+
+function Index(): JSX.Element {
   return (
-    <div className="app-container">
-      <Typography className="title" variant="h2" component="h2">
-        Welcome to CareerFair.ai<br />
-        Coming Soon!{" "}
-        {/* <span className="wave">👋</span> */}
-      </Typography>
-      <Typography className="subtitle" variant="h4" component="h4">
-        Please Stay Tuned!
-      </Typography>
-      <div className="main-container">
-      <div className="btns-container">
-      <Button
-          className="home-btns"
-          variant="contained"
-          href=" https://www.eurekalert.org/news-releases/711820"
-          target="_blank" >
-          About our Project!
-        </Button>
-        <Button
-          className="home-btns"
-          variant="contained"
-          href=""
-          target="_blank"  >
-          Study Page (Spring 2022)
-        </Button>
+    <>
+      <div className="page-container" id="#About">
+        <NavBar />
+        <Banner
+          title={"Welcome to CareerFair.ai"}
+          text={
+            "CareerFair.ai: Increasing Connections to Fast Growing STEM-Careers is a collaborative research project between University of Southern California’s Institute for Creative Technologies (USC ICT) and California State University, Fullerton.  We make high-quality mentoring available to students for free, using virtual agents representing real-life STEM mentors."
+          }
+        />
+        <div className="logos-container">
+          <img
+            src={`${csuf2}`}
+            srcSet={`${csuf2}`}
+            alt={csuf2}
+            loading="lazy"
+            className={`logo`}
+          />
+          <img
+            src={`${usc_ict}`}
+            srcSet={`${usc_ict}`}
+            alt={usc_ict}
+            loading="lazy"
+            className={`logo`}
+          />
+        </div>
+        <div className="navigate-btn-container">
+          <KeyboardArrowDownIcon
+            className="navigate-btn"
+            onClick={() =>
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth",
+              })
+            }
+          />
+        </div>
+        <SocialMediaBubble />
       </div>
-      <div className="icontainer">
-      <a href="https://ict.usc.edu/ " target="_blank">
-          <img src={logo3} className="logo-img3"></img>
-        </a>
-        <a href=" http://www.fullerton.edu/" target="_blank">
-          <img src={logo1} className="logo-img1"></img>
-        </a>
-        {/* <a href="https://www.fullerton.edu/projectraise/" target="_blank">
-          <img src={logo2} className="logo-img2"></img>
-        </a> */}
-        <a href= "https://dodstem.us" target="_blank">
-          <img src={logo5} className="logo-img5"></img>
-        </a>
-        {/* <a href="http://www.fullerton.edu/mcNair/" target="_blank">
-          <img src={logo6} className="logo-img6"></img>
-        </a> */}
+      <div className="page-container" id="#Sponsors">
+        <Banner
+          title={"Sponsors"}
+          text={
+            "This project is funded by the Department of Defense National Defense Education Program (HQ0034-20-S-FO01), which aims to increase participation, retention, and diversity in Science, Technology, Engineering, and Mathematics (STEM) across different sectors/industries. Visit DoD STEM for more information: https://dodstem.us/"
+          }
+        />
+        <div className="logos-container">
+          <img
+            src={`${csuf2}`}
+            srcSet={`${csuf2}`}
+            alt={csuf2}
+            loading="lazy"
+            className={`logo`}
+          />
+          <img
+            src={`${DOD}`}
+            srcSet={`${DOD}`}
+            alt={DOD}
+            loading="lazy"
+            className={["logo", "DOD-logo"].join(" ")}
+          />
+          <img
+            src={`${usc_ict}`}
+            srcSet={`${usc_ict}`}
+            alt={usc_ict}
+            loading="lazy"
+            className={`logo`}
+          />
+        </div>
+        <SocialMediaBubble />
       </div>
-      </div>
-      <Typography className="subtitle" variant="h4" component="h4">
-        Connect with us!
-      </Typography>
-      <a href = "https://twitter.com/CareerFair_AI" target="_blank">
-      <h1> @careefair.ai </h1></a>
-<a href = " https://www.instagram.com/careerfair.ai/" target="_blank">
-      <h1> @careefair.ai </h1></a>
-      <div className="social">
-        <Instagram />
-      </div>
-    </div>
+    </>
   );
 }
 
-export default IndexPage;
+export default Index;
