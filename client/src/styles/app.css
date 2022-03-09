@@ -1,3 +1,9 @@
+/*
+This software is Copyright ©️ 2020 The University of Southern California. All Rights Reserved. 
+Permission to use, copy, modify, and distribute this software and its documentation for educational, research and non-profit purposes, without fee, and without a written agreement is hereby granted, provided that the above copyright notice and subject to the full license file found in the root of this software deliverable. Permission to make commercial use of this software may be obtained by contacting:  USC Stevens Center for Innovation University of Southern California 1150 S. Olive Street, Suite 2300, Los Angeles, CA 90115, USA Email: accounting@stevens.usc.edu
+
+The full terms of this copyright and license should always be found in the root directory of this software deliverable as "license.txt" and if these terms are not found with this software, please contact the USC Stevens Center for the full license.
+*/
 :root {
   --blue: #007cba;
 }
@@ -5,12 +11,12 @@
   margin: 0px;
   padding: 0px;
 }
-body {
+/* body {
   background-color: var(--blue) !important;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .page-container {
   height: 97.5vh;
@@ -27,7 +33,7 @@ body {
 .navbar {
   position: fixed;
   top: 30px;
-  right: 50px;
+  right: 30px;
 }
 
 .navbar-about,
@@ -38,7 +44,7 @@ body {
 
 .banner-container {
   height: 40%;
-  width: 80%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,4 +139,100 @@ body {
   color: #fff;
   font-size: 35px !important;
   cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(134, 134, 134, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 204, 204);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(139, 139, 139);
+}
+
+@media only screen and (max-width: 600px) {
+  .page-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+  }
+  .banner-title {
+    font-size: 20px;
+  }
+
+  .banner-about {
+    font-size: 15px;
+  }
+
+  .banner-container {
+    height: 40%;
+    width: 90%;
+    margin-top: -40px;
+    margin-bottom: 40px;
+  }
+
+  .social-bubble {
+    position: fixed;
+    height: 40px;
+    width: 130px;
+    right: 35px;
+    bottom: 70px;
+    border-radius: 15px;
+    background-color: var(--blue) !important;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
+    box-shadow: 0px 8px 10px 0px rgba(0, 124, 186, 0.45) !important;
+  }
+
+  .social-media-icon {
+    color: #fff;
+    font-size: 30px !important;
+    cursor: pointer;
+  }
+
+  .logos-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    width: 70% !important;
+    height: 70px !important;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
+    box-shadow: 0px 16px 10px 0px rgba(212, 212, 212, 0.45) !important;
+  }
+
+  .navigate-btn-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+  }
 }

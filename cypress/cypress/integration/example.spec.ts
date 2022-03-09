@@ -1,7 +1,7 @@
 import { cySetup } from "../support/functions";
 
 describe("visits the site", () => {
-  it.only("opens the site at localhost:8000", () => {
+  it("opens the site at localhost:8000", () => {
     cySetup(cy);
     cy.visit("/");
   });

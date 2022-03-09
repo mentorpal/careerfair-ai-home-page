@@ -3,5 +3,12 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "gatsby-template-project",
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: 'my-website-bucket',
+      },
+    },
+  ],
 };
