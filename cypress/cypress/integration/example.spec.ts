@@ -14,7 +14,9 @@ describe("visits the site", () => {
 
   it("takes a snapshot of the site", () => {
     cySetup(cy);
+    cy.viewport(1280, 720);
     cy.visit("/");
+
     cy.matchImageSnapshot(`screenshots-example`);
   });
 });
