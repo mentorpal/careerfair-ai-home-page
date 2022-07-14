@@ -4,7 +4,7 @@ Permission to use, copy, modify, and distribute this software and its documentat
 
 The full terms of this copyright and license should always be found in the root directory of this software deliverable as "license.txt" and if these terms are not found with this software, please contact the USC Stevens Center for the full license.
 */
-import { ListItem, Stack, Typography } from "@mui/material";
+import { Button, ListItem, Stack, Typography } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -37,6 +37,23 @@ function NavBar(): JSX.Element {
             >
               Sponsor
             </Typography>
+          </ListItem>
+        </motion.div>
+        <motion.div transition={{ duration: 0.3 }} whileHover={{ scale: 1.3 }}>
+          <ListItem>
+            <Button
+              variant="contained"
+              className="navbar-Sponsors"
+              style={{
+                backgroundColor: "#007cba !important",
+                color: "#fff !important",
+              }}
+              onClick={() =>
+                window.open("https://www.instagram.com/p/CfcLQHevxhP/")
+              }
+            >
+              Participate
+            </Button>
           </ListItem>
         </motion.div>
       </Stack>
