@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "@types/styled-components": "^5.1.17"
+  },
   "devDependencies": {
     "license-check-and-add": "^4.0.2",
     "prettier": "^2.3.0"
