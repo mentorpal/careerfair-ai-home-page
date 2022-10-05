@@ -15,6 +15,9 @@ import DOD from "static/DOD.png";
 
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SocialMediaBubble from "components/socialMedia/social-media-bubble";
+import ContactCard from "components/contact-card/contact-card";
+import { motion } from "framer-motion";
+import { Card, Typography } from "@mui/material";
 
 function Index(): JSX.Element {
   return (
@@ -58,8 +61,7 @@ function Index(): JSX.Element {
           <KeyboardArrowDownIcon
             className="navigate-btn"
             onClick={() =>
-              window.scrollTo({
-                top: document.body.scrollHeight,
+              document?.getElementById("Sponsors")?.scrollIntoView({
                 behavior: "smooth",
               })
             }
@@ -67,7 +69,7 @@ function Index(): JSX.Element {
         </div>
         <SocialMediaBubble />
       </div>
-      <div className="page-container" id="#Sponsors">
+      <div className="page-container" id="Sponsors">
         <Banner
           title={"Sponsor"}
           text={
@@ -84,6 +86,44 @@ function Index(): JSX.Element {
             onClick={() => window.open("https://dodstem.us/")}
           />
         </div>
+        <SocialMediaBubble />
+      </div>
+      <div className="page-container" id="Contact">
+        <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: "0%" }}
+          transition={{ duration: 0.3 }}
+          whileHover={{ scale: 1.05 }}
+          className="banner-container"
+        >
+          <Card className="banner-card">
+            <Typography
+              variant="h3"
+              className="banner-title"
+              style={{ marginBottom: 20 }}
+            >
+              Contact
+            </Typography>
+            <div className="contact-container">
+              <ContactCard
+                name={"Benjamin Nye, Ph.D"}
+                ocupation={"USC Institute for Creative Technologies"}
+                email={"careerfair.ai@gmail.com"}
+              />
+              <ContactCard
+                name={"William Swartout, Ph.D. "}
+                ocupation={"USC Institute for Creative Technologies"}
+                email={"careerfair.ai@gmail.com"}
+              />
+              <ContactCard
+                name={"Yuko Okado, Ph.D"}
+                ocupation={"California State University, Fullerton"}
+                email={"careerfair.ai@gmail.com"}
+              />
+            </div>
+          </Card>
+        </motion.div>
+
         <SocialMediaBubble />
       </div>
     </>

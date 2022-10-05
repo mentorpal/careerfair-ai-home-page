@@ -29,13 +29,27 @@ function NavBar(): JSX.Element {
               variant="h6"
               className="navbar-Sponsors"
               onClick={() =>
-                window.scrollTo({
-                  top: document.body.scrollHeight,
+                document?.getElementById("Sponsors")?.scrollIntoView({
                   behavior: "smooth",
                 })
               }
             >
               Sponsor
+            </Typography>
+          </ListItem>
+        </motion.div>
+        <motion.div transition={{ duration: 0.3 }} whileHover={{ scale: 1.3 }}>
+          <ListItem>
+            <Typography
+              variant="h6"
+              className="navbar-Sponsors"
+              onClick={() =>
+                document?.getElementById("Contact")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+            >
+              Contact
             </Typography>
           </ListItem>
         </motion.div>
