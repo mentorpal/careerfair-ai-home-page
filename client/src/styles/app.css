@@ -31,7 +31,8 @@
 }
 
 .navbar-about,
-.navbar-Sponsors {
+.navbar-Sponsors,
+.navbar-item {
   color: var(--blue) !important;
   cursor: pointer;
 }
@@ -103,7 +104,7 @@
   bottom: 40px;
   margin-left: auto;
   margin-right: auto;
-  width: 100px;
+  width: 10px;
 }
 
 .navigate-btn {
@@ -137,6 +138,34 @@
   color: #fff;
   font-size: 35px !important;
   cursor: pointer;
+}
+.toolbar-container {
+  display: flex !important;
+  justify-content: start !important;
+  width: 90% !important;
+}
+
+.navbar {
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+.navbar-item-container {
+  width: auto !important;
+}
+
+.participate-btn {
+  position: absolute !important;
+  right: 15px !important;
+}
+
+.navigate-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* width */
@@ -173,12 +202,31 @@
     border-radius: 10px;
     margin: 10px 0px 10px 0px;
   }
+  .navbar {
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+  }
+  .navbar-item-container {
+    width: auto !important;
+    padding: 0px !important;
+  }
+  .navbar-item {
+    font-size: 20px;
+    margin-right: 15px !important;
+  }
+  .participate-btn {
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 12px !important;
+  }
   .banner-title {
-    font-size: 25px;
+    font-size: 25px !important;
   }
 
   .banner-about {
-    font-size: 12px;
+    font-size: 12px !important;
   }
 
   .banner-container {
@@ -193,7 +241,7 @@
     height: 40px;
     width: 130px;
     right: 35px;
-    bottom: 70px;
+    bottom: 20px;
     border-radius: 15px;
     background-color: var(--blue) !important;
     -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
@@ -223,15 +271,52 @@
     -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
     box-shadow: 0px 16px 10px 0px rgba(212, 212, 212, 0.45) !important;
   }
+  .toolbar-container {
+    width: 95%;
+    display: flex !important;
+    justify-content: space-evenly;
+  }
 
   .navigate-btn-container {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 60px;
+    bottom: 80px;
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    width: 10px;
+  }
+  .navigate-btn-wrapper {
+    display: none;
+  }
+  .contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .contact-card-profile {
+    display: flex;
+    min-height: 150px !important;
+    min-width: 300px !important;
+  }
+  .contact-avatar {
+    max-height: 150px;
+    max-width: 80px;
+    min-width: 100px;
+  }
+  .contact-card-name {
+    font-size: 15px !important;
+  }
+  .contact-card-ocupation {
+    font-size: 10px !important;
+  }
+  .contact-email {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

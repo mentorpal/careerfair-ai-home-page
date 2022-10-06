@@ -4,75 +4,94 @@ Permission to use, copy, modify, and distribute this software and its documentat
 
 The full terms of this copyright and license should always be found in the root directory of this software deliverable as "license.txt" and if these terms are not found with this software, please contact the USC Stevens Center for the full license.
 */
-import { Button, ListItem, Stack, Typography } from "@mui/material";
+import {
+  AppBar,
+  Box,
+  Button,
+  IconButton,
+  ListItem,
+  Stack,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
 import { motion } from "framer-motion";
 
 function NavBar(): JSX.Element {
-  return (
-    <div className="navbar">
-      <Stack direction="row" spacing={8}>
-        <motion.div transition={{ duration: 0.3 }} whileHover={{ scale: 1.3 }}>
-          <ListItem>
-            <Typography
-              variant="h6"
-              className="navbar-about"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              About
-            </Typography>
-          </ListItem>
-        </motion.div>
-        <motion.div transition={{ duration: 0.3 }} whileHover={{ scale: 1.3 }}>
-          <ListItem>
-            <Typography
-              variant="h6"
-              className="navbar-Sponsors"
-              onClick={() =>
-                document?.getElementById("Sponsors")?.scrollIntoView({
-                  behavior: "smooth",
-                })
-              }
-            >
-              Sponsor
-            </Typography>
-          </ListItem>
-        </motion.div>
-        <motion.div transition={{ duration: 0.3 }} whileHover={{ scale: 1.3 }}>
-          <ListItem>
-            <Typography
-              variant="h6"
-              className="navbar-Sponsors"
-              onClick={() =>
-                document?.getElementById("Contact")?.scrollIntoView({
-                  behavior: "smooth",
-                })
-              }
-            >
-              Contact
-            </Typography>
-          </ListItem>
-        </motion.div>
-        <motion.div transition={{ duration: 0.3 }} whileHover={{ scale: 1.3 }}>
-          <ListItem>
-            <Button
-              variant="contained"
-              className="navbar-Sponsors"
-              style={{
-                backgroundColor: "#007cba !important",
-                color: "#fff !important",
-              }}
-              onClick={() =>
-                window.open("https://www.instagram.com/p/CfcLQHevxhP/")
-              }
-            >
-              Participate
-            </Button>
-          </ListItem>
-        </motion.div>
-      </Stack>
-    </div>
+  const participateBtn = (
+    <Button
+      variant="contained"
+      className="participate-btn"
+      style={{
+        backgroundColor: "#007cba !important",
+        color: "#fff !important",
+      }}
+      onClick={() => window.open("https://www.instagram.com/p/Ci0m0-qvOwf/")}
+    >
+      Participate
+    </Button>
   );
+
+  const navbarItems = (
+    <>
+      <ListItem className="navbar-item-container">
+        <Typography
+          variant="h6"
+          className="navbar-item"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          About
+        </Typography>
+      </ListItem>
+      <ListItem className="navbar-item-container">
+        <Typography
+          variant="h6"
+          className="navbar-item"
+          onClick={() =>
+            document?.getElementById("Sponsors")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+        >
+          Sponsor
+        </Typography>
+      </ListItem>
+      <ListItem className="navbar-item-container">
+        <Typography
+          variant="h6"
+          className="navbar-item"
+          onClick={() =>
+            document?.getElementById("Contact")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+        >
+          Contact
+        </Typography>
+      </ListItem>
+    </>
+  );
+  const nav = (
+    <Box sx={{ flexGrow: 1, zIndex: 2 }}>
+      <AppBar
+        position="fixed"
+        style={{
+          backgroundColor: "#fff",
+          boxShadow: "none",
+          display: "flex",
+          justifyContent: "space-between",
+        }}
+      >
+        <Toolbar className="toolbar-container">
+          {navbarItems}
+          {participateBtn}
+        </Toolbar>
+      </AppBar>
+    </Box>
+  );
+
+  return <div className="navbar">{nav}</div>;
 }
 
 export default NavBar;

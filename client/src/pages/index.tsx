@@ -19,9 +19,13 @@ import ContactCard from "components/contact-card/contact-card";
 import { motion } from "framer-motion";
 import { Card, Typography } from "@mui/material";
 
+import BenNye from "../static/nye_benjamin.jpeg";
+import YukoOkado from "../static/okado_yuko2.png";
+import WilliamSwartout from "../static/swartout_william.jpeg";
+
 function Index(): JSX.Element {
   return (
-    <>
+    <div>
       <div className="page-container" id="#About">
         <NavBar />
 
@@ -58,14 +62,16 @@ function Index(): JSX.Element {
           />
         </div>
         <div className="navigate-btn-container">
-          <KeyboardArrowDownIcon
-            className="navigate-btn"
-            onClick={() =>
-              document?.getElementById("Sponsors")?.scrollIntoView({
-                behavior: "smooth",
-              })
-            }
-          />
+          <div className="navigate-btn-wrapper">
+            <KeyboardArrowDownIcon
+              className="navigate-btn"
+              onClick={() =>
+                document?.getElementById("Sponsors")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+            />
+          </div>
         </div>
         <SocialMediaBubble />
       </div>
@@ -89,44 +95,88 @@ function Index(): JSX.Element {
         <SocialMediaBubble />
       </div>
       <div className="page-container" id="Contact">
-        <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: "0%" }}
-          transition={{ duration: 0.3 }}
-          whileHover={{ scale: 1.05 }}
-          className="banner-container"
+        <Typography
+          variant="h3"
+          className="banner-title"
+          style={{ marginBottom: 15, color: "#007cba" }}
+          sx={{ marginBottom: 0 }}
         >
-          <Card className="banner-card">
-            <Typography
-              variant="h3"
-              className="banner-title"
-              style={{ marginBottom: 20 }}
-            >
-              Contact
-            </Typography>
-            <div className="contact-container">
-              <ContactCard
-                name={"Benjamin Nye, Ph.D"}
-                ocupation={"USC Institute for Creative Technologies"}
-                email={"careerfair.ai@gmail.com"}
-              />
-              <ContactCard
-                name={"William Swartout, Ph.D. "}
-                ocupation={"USC Institute for Creative Technologies"}
-                email={"careerfair.ai@gmail.com"}
-              />
-              <ContactCard
-                name={"Yuko Okado, Ph.D"}
-                ocupation={"California State University, Fullerton"}
-                email={"careerfair.ai@gmail.com"}
-              />
-            </div>
-          </Card>
-        </motion.div>
+          Contact
+        </Typography>
+        <div className="contact-container">
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: "0%" }}
+            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <ContactCard
+              name={"Benjamin Nye, Ph.D."}
+              ocupation={"USC Institute for Creative Technologies"}
+              email={"Principal Investigator"}
+              avatar={BenNye}
+              link={"https://ict.usc.edu/profile/benjamin-nye/"}
+            />
+          </motion.div>
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: "0%" }}
+            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <ContactCard
+              name={"William Swartout, Ph.D. "}
+              ocupation={"USC Institute for Creative Technologies"}
+              email={"Principal Investigator"}
+              avatar={WilliamSwartout}
+              link={
+                "https://ict.usc.edu/about-us/leadership/senior-management/william-swartout/"
+              }
+            />
+          </motion.div>
+
+          <motion.div
+            initial={{ x: "-100%" }}
+            animate={{ x: "0%" }}
+            transition={{ duration: 0.3 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <ContactCard
+              name={"Yuko Okado, Ph.D."}
+              ocupation={"California State University, Fullerton"}
+              email={"Principal Investigator"}
+              avatar={YukoOkado}
+              link={
+                "https://psychology.fullerton.edu/faculty/facultyprofiles/y_okado.aspx"
+              }
+            />
+          </motion.div>
+        </div>
+        <div
+          style={{ display: "flex", marginTop: 20, marginBottom: 20 }}
+          className="contact-email"
+        >
+          <Typography
+            variant="h6"
+            style={{ color: "#007cba", marginRight: 15 }}
+            sx={{ fontSize: 20, marginRight: 0, margin: "auto" }}
+          >
+            Project Contact:
+          </Typography>
+          <Typography
+            variant="h6"
+            style={{ color: "#007cba" }}
+            sx={{ fontSize: 20, margin: "auto" }}
+          >
+            Careerfair.ai@gmail.com
+          </Typography>
+        </div>
+
+        {/* careerfair.ai@gmail.com */}
 
         <SocialMediaBubble />
       </div>
-    </>
+    </div>
   );
 }
 

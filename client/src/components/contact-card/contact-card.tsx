@@ -8,39 +8,59 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
+import CardMedia from "@mui/material/CardMedia";
+import { Button, CardActions } from "@mui/material";
 
 interface ContactCardProps {
   name: string;
   ocupation: string;
-  email: string;
+  email?: string;
+  link: string;
   avatar?: string;
 }
 
 function ContactCard(props: ContactCardProps): JSX.Element {
-  const { name, ocupation, email } = props;
+  const { name, ocupation, link, avatar } = props;
   return (
     <div style={{ margin: 20 }}>
-      <Card sx={{ minWidth: 475 }}>
+      <Card
+        sx={{ minWidth: 260, maxWidth: 80, maxHeight: 500, minHeight: 500 }}
+        className="contact-card-profile"
+      >
+        <CardMedia
+          component="img"
+          height="300"
+          width="200"
+          image={avatar}
+          alt={`${name}-img`}
+          style={{ display: "block", objectFit: "cover" }}
+          className="contact-avatar"
+        />
         <CardContent>
           <Typography
-            variant="h5"
+            variant="h6"
             component="div"
-            style={{ marginBottom: 10, color: "#007cba" }}
+            style={{ color: "#007cba" }}
+            // sx={{ fontSize: 15, marginBottom: 0 }}
+            className="contact-card-name"
           >
-            <b>{name}</b>
+            {name}
           </Typography>
           <Typography
-            sx={{ mb: 1.5 }}
             color="text.secondary"
             style={{ color: "#007cbabf" }}
-            variant="h6"
+            variant="body1"
+            // sx={{ fontSize: 10 }}
+            className="contact-card-ocupation"
           >
             {ocupation}
           </Typography>
-          <Typography variant="body1" style={{ color: "#007cba" }}>
-            {email}
-          </Typography>
         </CardContent>
+        <CardActions>
+          <Button size="small" onClick={() => window.open(link)}>
+            More
+          </Button>
+        </CardActions>
       </Card>
     </div>
   );
