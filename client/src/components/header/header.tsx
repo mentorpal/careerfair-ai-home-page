@@ -4,19 +4,18 @@ Permission to use, copy, modify, and distribute this software and its documentat
 
 The full terms of this copyright and license should always be found in the root directory of this software deliverable as "license.txt" and if these terms are not found with this software, please contact the USC Stevens Center for the full license.
 */
-import { cySetup } from "../support/functions";
+import { Typography } from "@mui/material";
+import React from "react";
+import "styles/layout.css";
 
-describe("visits the site", () => {
-  it("opens the site at localhost:8000", () => {
-    cySetup(cy);
-    cy.visit("/");
-  });
+function Header(): JSX.Element {
+  return (
+    <div className="header-container">
+      <Typography className="title" variant="h2" component="h2">
+        Meeting scheduling made easy
+      </Typography>
+    </div>
+  );
+}
 
-  it("takes a snapshot of the site", () => {
-    cySetup(cy);
-    cy.viewport(1280, 720);
-    cy.visit("/");
-
-    cy.matchImageSnapshot(`screenshots-example`);
-  });
-});
+export default Header;

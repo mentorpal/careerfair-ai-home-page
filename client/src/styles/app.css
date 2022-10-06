@@ -1,0 +1,336 @@
+:root {
+  --blue: #007cba;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+/* body {
+  background-color: var(--blue) !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.page-container {
+  height: 97.5vh;
+  width: 97vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px 0px 10px 0px;
+}
+
+.navbar {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+}
+
+.navbar-about,
+.navbar-Sponsors,
+.navbar-item {
+  color: var(--blue) !important;
+  cursor: pointer;
+}
+
+.banner-container {
+  height: 40%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 15px;
+  margin-bottom: 70px;
+}
+
+.banner-card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px !important;
+  background-color: var(--blue) !important;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
+  box-shadow: 0px 16px 10px 0px rgba(0, 124, 186, 0.45) !important;
+}
+
+.banner-title,
+.banner-about {
+  color: #fff;
+}
+
+.banner-about {
+  max-width: 80%;
+  text-align: justify;
+  font-weight: normal !important;
+  margin-top: 1.5rem !important;
+}
+
+.logos-container {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  display: block;
+  max-width: 50%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
+  box-shadow: 0px 16px 10px 0px rgba(212, 212, 212, 0.45) !important;
+}
+
+.DOD-logo {
+  height: 120px !important;
+}
+
+.navigate-btn-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10px;
+}
+
+.navigate-btn {
+  font-size: 40px !important;
+  color: var(--blue) !important;
+  font-weight: bold !important;
+  cursor: pointer;
+}
+
+.social-bubble {
+  position: fixed;
+  height: 60px;
+  width: 150px;
+  right: 50px;
+  bottom: 40px;
+  border-radius: 15px;
+  background-color: var(--blue) !important;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
+  box-shadow: 0px 8px 10px 0px rgba(0, 124, 186, 0.45) !important;
+}
+
+.media-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-media-icon {
+  color: #fff;
+  font-size: 35px !important;
+  cursor: pointer;
+}
+.toolbar-container {
+  display: flex !important;
+  justify-content: start !important;
+  width: 90% !important;
+}
+
+.navbar {
+  position: fixed;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+
+.navbar-item-container {
+  width: auto !important;
+}
+
+.participate-btn {
+  position: absolute !important;
+  right: 15px !important;
+}
+
+.navigate-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(134, 134, 134, 0.3);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: rgb(204, 204, 204);
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(139, 139, 139);
+}
+
+@media only screen and (max-width: 600px) {
+  .page-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+  }
+  .navbar {
+    position: fixed;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+  }
+  .navbar-item-container {
+    width: auto !important;
+    padding: 0px !important;
+  }
+  .navbar-item {
+    font-size: 20px;
+    margin-right: 15px !important;
+  }
+  .participate-btn {
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 12px !important;
+  }
+  .banner-title {
+    font-size: 25px !important;
+  }
+
+  .banner-about {
+    font-size: 12px !important;
+  }
+
+  .banner-container {
+    height: 40%;
+    width: 90%;
+    margin-top: -40px;
+    margin-bottom: 40px;
+  }
+
+  .social-bubble {
+    position: fixed;
+    height: 40px;
+    width: 130px;
+    right: 35px;
+    bottom: 20px;
+    border-radius: 15px;
+    background-color: var(--blue) !important;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
+    box-shadow: 0px 8px 10px 0px rgba(0, 124, 186, 0.45) !important;
+  }
+
+  .social-media-icon {
+    color: #fff;
+    font-size: 30px !important;
+    cursor: pointer;
+  }
+
+  .logos-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .logo {
+    width: 70% !important;
+    height: 70px !important;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
+    box-shadow: 0px 16px 10px 0px rgba(212, 212, 212, 0.45) !important;
+  }
+  .toolbar-container {
+    width: 95%;
+    display: flex !important;
+    justify-content: space-evenly;
+  }
+
+  .navigate-btn-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10px;
+  }
+  .navigate-btn-wrapper {
+    display: none;
+  }
+  .contact-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .contact-card-profile {
+    display: flex;
+    min-height: 150px !important;
+    min-width: 300px !important;
+  }
+  .contact-avatar {
+    max-height: 150px;
+    max-width: 80px;
+    min-width: 100px;
+  }
+  .contact-card-name {
+    font-size: 15px !important;
+  }
+  .contact-card-ocupation {
+    font-size: 10px !important;
+  }
+  .contact-email {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1000px) {
+  .logo {
+    display: block;
+    max-width: 30%;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+    /* width: 30% !important;
+    height: 90px !important; */
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 124, 186, 0.35);
+    box-shadow: 0px 16px 10px 0px rgba(212, 212, 212, 0.45) !important;
+  }
+}
